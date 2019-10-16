@@ -1,0 +1,240 @@
+/* General branding */ 
+
+body {
+    font-size: 14px; /* check for mobile */ 
+    font-family: Arial, sans-serif; 
+}
+
+.viewIt h1 {
+    font-size: 1em; 
+}
+
+a {
+    text-decoration: underline !important; 
+}
+
+.iframeHeaderContent > em {
+    text-transform: none; 
+}
+
+.iframeHeaderContent {
+    margin: 0;
+}
+
+.iframeHeader {
+    background-color: rgba(253,210,110, .5); /* OSU Brand color: Candela; half-alpha */ 
+    border-radius: 5px; 
+}
+
+span.itemLibraryName::before, span.libraryName::before {
+    content: "Location:";
+    margin-right: 2em;
+    color: #333;
+}
+
+li.itemAvailabilityInfo::before {
+    content: "Availability:";
+    margin-right: 1em;
+    color: #333;
+}
+
+li.itemAvailabilityInfo {
+    font-weight: bold;
+    color: #007c89;
+}
+
+#displayHolding {
+    display: none;
+}
+
+span.itemAvailabilityInfo::before {
+    content: "Holdings:";
+    margin-right: 2em;
+    color: #333;
+}
+
+span.itemAvailabilityInfo,
+ul.showMore li {
+    font-weight: bold;
+    color: #007c89;
+}
+
+/* ul.filterResults {
+    background-color: rgba(253,210,110, .3);
+} */
+
+.filterResults select {
+    background-color: white;
+    padding: 0;
+}
+
+.itemsList table tbody tr td:first-child {
+    color: black !important; 
+}
+
+/* #PAGING {
+    background-color: rgba(199,182,131,0.1);
+} */
+
+.paginationContainer ul, .paginationContainer .pagination {
+    padding: 0 1em !important; 
+}
+
+.paginationContainer {
+    background-color: #f1f1f1; 
+}
+
+#PAGING > li {
+    color: #333;
+    opacity: 1;
+}
+
+#PAGING .buttonAction > input {
+    background-color: #dc4405;
+    color: white;
+    padding: 0.375em, 1em;
+    cursor: pointer;
+    font-size: 1em;
+    border: solid 1px #dc4405;
+    transition: background-color 0.4s ease, color 0.4s ease;
+    text-transform: none;
+  }
+
+#PAGING .buttonAction > input:hover {
+      background-color: rgba(194,32,51,0.2);
+      color: #dc4405;
+  }
+
+#PAGING .buttonAction {
+    padding: 1px;
+    min-height: 5em;
+  }
+
+#PAGING .selected > input {
+      background-color: white;
+      border: solid 1px #dc4405;
+      color: #dc4405;
+  }
+
+#PAGING .selected > input:hover {
+      background-color: white;
+      border: solid 1px #dc4405;
+      color: #dc4405;
+  }
+  
+#TABLE_DATA_item_list > thead {
+    background-color: #333;
+    color: white;
+}
+
+.itemsList table thead th {
+    opacity: 1;
+    font-weight: bold;
+    text-transform: none;
+    font-size: 1em;
+    padding: .25em;
+}
+
+.itemsList {
+    padding: 0;
+    border: 0;
+}
+
+.itemsList table tbody tr {
+    background-color: rgba(199,182,131,0.3);
+    color: #333;
+    font-size: 1em;
+}
+
+.itemsList table tbody tr.odd {
+    background-color: rgba(199,182,131,0.1);
+}
+
+.itemsList table tbody tr td,
+.itemsList table tbody tr td:last-child {
+    padding: .25em;
+    vertical-align: middle;
+}
+
+.holdingInfo li {
+    color: black; 
+}
+
+.clearfix {
+    margin: 1em 0; 
+}
+
+.clearfix:first-of-type {
+    margin: 0; 
+}
+
+.publicNote {
+    padding: 0 1em; 
+}
+
+div.clearfix.requestOptionNoHoldings::after {
+    display: none; 
+}
+
+@media only screen and (max-width: 450px) {
+    .publicNote {
+        margin: 0; 
+    }
+}
+
+/* Summit Request modal */ 
+
+#ownerList,
+#resourceInformationContainer,
+#resourceInformationList,
+#deliveryInformationContainer,
+#deliveryInformationList,
+#siteConfigurableTextList,
+#titleList {
+    background-color: white;
+}
+
+a.reset {
+    margin: 10px;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.2);
+    display: none; /* Hide Cancel button */ 
+}
+
+div.resetContainer::after {
+    content: "Please click the Request button only once." 
+}
+
+div.submitBorder {
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.2);
+}
+
+input#openRequest {
+    font-weight: bold;
+    transition: color 0.4s ease, background-color 0.4s ease;
+}
+
+input#openRequest:hover,
+input#openRequest:focus {
+    color: #333;
+    background-color: #eee;
+}
+
+.requestForm .width24, .purchaseRequest .width24 {
+    height: inherit;
+    width: inherit;
+}
+
+/* Hides locate links and request bars */ 
+@media screen and (min-width: 810px) and (max-width: 812px)
+{
+    .iframeHeaderContent { display: none; }
+    .locate { display: none !important; }
+}
+
+/* fix Chrome 76 */
+.requestForm li, .purchaseRequest li {
+  display: inline-block;
+  position: relative;
+}
+
+.viewIt > ul > li a[target="_blank"]::after { width: 0; }
